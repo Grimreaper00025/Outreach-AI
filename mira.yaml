@@ -1,0 +1,52 @@
+version: "0.1.16"
+
+metadata:
+  name: "academic-outreach-email-generator"
+  description: "Generates a professional academic cold outreach email using professor details and a user's CV."
+  author: "vishal"
+  tags: [academic, outreach, email, LLM]
+  private: false
+
+inputs:
+  input1:
+    type: string
+    description: "Professor details as a string (e.g., Name, Email, Interests, Work Highlight)."
+    required: true
+    example: "Name: Dr. Smith; Email: drsmith@example.com; Interests: Machine Learning, AI; Work Highlight: 'Deep learning in healthcare'"
+  input2:
+    type: string
+    description: "User CV text extracted from a PDF (the CV should be converted to plain text)."
+    required: true
+    example: "John Doe has a background in computer science with expertise in machine learning, data analysis, and research."
+  input3:
+    type: string
+    description: "Additional context: Instruct the model to extract key interests and skills from the CV and then generate a tailored outreach email."
+    required: true
+    example: "Generate an email that highlights my research interests in AI, mentions my skills, and explains why I'm interested in collaborating."
+
+model:
+  provider: "openai"   # Replace with your actual provider (e.g., "openai", "anthropic", etc.)
+  name: "gpt-4o"          # Replace with your actual model identifier (e.g., "gpt-4o", "claude-3.5-sonnet", etc.)
+
+prompt: |
+  You are a highly professional academic outreach email writer. Your task is to write a final, polished email message from an applicant who is actively applying for a research role in the professor's group. Write the email as if it were already sent—complete with natural paragraph breaks and newlines—and do not include any placeholders or instructions within the final output.
+
+  Use the following steps to generate the email:
+
+  1. Analyze the user CV text provided in {input2} and extract only the key interests, skills, and academic achievements that are most relevant to the professor's research. Discard any parts that do not align with the professor's field.
+
+  2. Incorporate the professor details from {input1} (which include the professor’s name, affiliation, research interests, and work highlights) to address the professor respectfully. Begin with a formal greeting that uses the professor's name.
+
+  3. Compose the email as if the applicant is applying for a research position. The email should:
+      - Introduce the applicant by name and state their current institution (information provided in {input3}).
+      - Summarize the applicant's relevant academic background, highlighting key skills and interests (extracted from {input2}).
+      - Clearly explain why the applicant is interested in joining the professor’s research group, referring specifically to the professor's research contributions and innovative approaches.
+      - Include a clear call-to-action inviting the professor to discuss potential collaboration or schedule an interview.
+      - Conclude with a polite closing that includes the applicant’s contact information (email and any additional details provided in {input3}) at the very end.
+  
+  4. Ensure the final email is engaging, coherent, and professionally formatted—with appropriate newlines and paragraph spacing—ready to be sent. Do not include the subject line or any meta instructions in the final output.
+
+  Produce the final email as one complete message.
+  
+readme: |
+  This flow generates a professional academic cold outreach email. It takes as inputs the professor's details, a user's CV (in text form), and additional context. The model is expected to extract key skills and interests from the CV and combine this with the professor's information to craft an engaging and tailored email.

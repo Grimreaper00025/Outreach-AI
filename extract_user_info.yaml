@@ -1,0 +1,28 @@
+version: "0.1.16"
+
+metadata:
+  name: "extract-user-info"
+  description: "Extracts key skills and interests from a user's CV text."
+  author: "vishal"
+  tags: [cv, extraction, user-info]
+  private: false
+
+inputs:
+  input:
+    type: string
+    description: "The CV text from which to extract skills and interests."
+    required: true
+    example: "John Doe is proficient in machine learning, data analysis, and natural language processing."
+
+model:
+  provider: "openai"   # Replace with your provider (e.g., "openai")
+  name: "gpt-4o"          # Replace with your model identifier (e.g., "gpt-4o")
+
+prompt: |
+  You are a professional academic analyzer. Extract the  Name , Contact , Institute , Github  and LinkendIn and key skills and interests and all that you think is relevant from the following CV text. If the text is insufficient, infer a plausible set of skills and interests that align with the applicant's background.
+  
+  CV Text:
+  {input}
+
+readme: |
+  This flow takes a CV text as input and returns a JSON object with keys "skills" and "interests" that represent the applicant's key strengths.

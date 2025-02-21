@@ -1,0 +1,26 @@
+version: "0.1.16"
+
+metadata:
+  name: "extract-email"
+  description: "Extracts an email address from a block of text."
+  author: "vishal"
+  tags: [email, extraction]
+  private: false
+
+inputs:
+  input:
+    type: string
+    description: "The text containing an email address."
+    required: true
+    example: "Contact: professor@example.com"
+
+model:
+  provider: "openai"   # e.g., "openai" or your chosen provider
+  name: "gpt-4o"          # e.g., "gpt-4o" (adjust as needed)
+
+prompt: |
+  Extract the first valid email address from the following text and only give back the email no other text
+  {input}
+
+readme: |
+  This flow takes a block of text as input and returns the first email address it finds.

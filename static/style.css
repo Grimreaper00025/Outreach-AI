@@ -1,0 +1,104 @@
+body {
+    background: url("./wmremove-transformed.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+  
+  /* Transparent container cards */
+  .card {
+    background-color: rgba(11, 11, 11, 0.689);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    margin-bottom: 1rem;
+    text-emphasis-color: white;
+  }
+  
+  /* Custom container to override Bootstrap's container for spacing if needed */
+  .container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  
+  /* Form elements styling */
+  .form-label {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .form-control {
+    border-radius: 4px;
+  }
+  
+  /* Button styling */
+  .btn {
+    border-radius: 4px;
+    font-weight: bold;
+    background-color: rgb(11, 11, 122);
+  }
+  .btn:hover {
+    /* Your hover styles here */
+    background-color: #0400d3; /* example */
+  }
+  /* Email preview container styling */
+  .email-content {
+    max-height: 400px;
+    overflow-y: auto;
+    word-wrap: break-word;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Header styling */
+  header {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 1rem 0;
+  }
+  
+  header h1 {
+    color: #fff;
+    margin: 0;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .container {
+      width: 95%;
+      padding: 10px;
+    }
+  }
+
+
+/* Card styling for content areas */
+.card {
+  background-color: rgba(255, 255, 255, 0.6);
+  border: none;
+  border-radius: 16px;
+  margin-bottom: 1rem;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+/* Email preview container */
+.email-content {
+  max-height: 400px;
+  overflow-y: auto;
+  word-wrap: break-word;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

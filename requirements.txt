@@ -1,0 +1,12 @@
+Flask==2.2.2
+requests==2.32.3
+aiohttp==3.8.1
+serpapi
+mira-network 
+Flask-Dance
+google-api-python-client==2.70.0
+google-auth==2.16.0
+google-auth-oauthlib==0.6.0
+mira-sdk==0.1.16
+PyPDF2
+pdf2image==1.17.0
