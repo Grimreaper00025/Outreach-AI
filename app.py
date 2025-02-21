@@ -24,7 +24,7 @@ from PIL import Image
 os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
 from mira_sdk import MiraClient, Flow, File, Reader, ComposioConfig
 
-client = MiraClient(config={"API_KEY": "sb-f5d7f4055a7cabad7b8d5a848453c8f8"})
+client = MiraClient(config={"API_KEY": MIRA_API_KEY})
 
 app = Flask(__name__)
 app.secret_key = "replace_with_your_secret_key"
@@ -240,6 +240,11 @@ def send_email_gmail(user_email, professor_email, subject, body):
         app.logger.error(f"Gmail API error: {str(e)}")
         return False
 
+@app.route("/logout")
+def logout():
+    session.pop("google_oauth_token", None)
+    flash("You have been logged out.")
+    return redirect(url_for("index"))
 
 @app.route("/", methods=["GET"])
 def index():
