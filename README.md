@@ -32,3 +32,9 @@ Run the following command to start the server:
 
 5. **Run Local Host:**  
 Open your browser and navigate to `localhost:port` (replace `port` with the port number specified in your `app.py` file) to access the application.
+
+## Demo Video 
+
+https://github.com/user-attachments/assets/5ca2725b-3458-4a2d-9d8b-e7b5138c2f76
+
+
