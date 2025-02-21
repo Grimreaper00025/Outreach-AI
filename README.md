@@ -3,7 +3,7 @@
 ## Team:
 HellFire
 ## Description:
-Outreach AI is an intelligent cold mailing pipeline designed to streamline academic networking. It allows users to sign in via Google Auth, extract professor emails from a provided Google Scholar link using the Google Search API, and upload their CV in PDF format. The system then leverages MIRA's OCR capabilities to extract essential information and generates personalized emails tailored to each professor. Users can preview the emails before the system dispatches them to all targeted recipients.
+Outreach AI is an intelligent cold mailing pipeline designed to streamline academic networking. It allows users to sign in via Google Auth, extract professor emails from a provided Google Scholar link using the Google Search API, and upload their CV in PDF format. The system then leverages MIRA's AI to extract essential information from the CV and generates personalized emails tailored to each professor. Users can preview the emails before the system dispatches them to all targeted recipients.
 
 ## Installation:
 
