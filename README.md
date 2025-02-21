@@ -17,13 +17,13 @@ Outreach AI is an intelligent cold mailing pipeline designed to streamline acade
 Change your directory to the cloned repository:
 
 ######
-    cd Outreach AI
+    cd OutreachAI
 
 3. **Install Dependencies:**  
 Install project dependencies by running:
 
 ######
-    pip intall -r requirements.txt
+    pip install -r requirements.txt
 
 
 4. **Start Server:**  
