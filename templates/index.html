@@ -36,7 +36,7 @@
       {% set user_info = google.get('/oauth2/v2/userinfo').json() %}
       <div class="card my-4">
         <div class="card-header">
-          <h2>Welcome ! ,  {{ user_info.email }}</h2>
+          <h2>Welcome !   {{ user_info.email }}</h2>
         </div>
         <div class="card-body">
           <form action="/fetch" method="post" enctype="multipart/form-data">

@@ -1,7 +1,7 @@
 Flask==2.2.2
 requests==2.32.3
 aiohttp==3.11.12
-serpapi==0.1.5
+google-search-results
 mira-network==0.1.10
 Flask-Dance==7.1.0
 google-api-python-client==2.70.0
